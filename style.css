@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+main {
+  padding: 3rem;
+}
+
+/* Header */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5rem;
+  background-color: rgb(32, 32, 32);
+  align-items: center;
+  color: white;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4em;
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add farmer form */
+.form-container {
+  border: 1px solid rgb(192, 192, 192);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 20px;
+  border-radius: 5px;
+}
+
+.add-form {
+  width: 20rem;
+}
+
+form {
+  width: 100%;
+}
+
+input {
+  padding: 7px 10px;
+  border-radius: 5px;
+  width: 93%;
+  border-color: rgb(126, 131, 136);
+}
+
+button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: rgb(61, 61, 221);
+}
+
+.submit:hover {
+  background-color: rgb(84, 84, 218);
+}
+
+/* -- Table -- */
+th,
+thead {
+  background-color: rgb(92, 92, 92);
+  color: white;
+  padding: 0;
+  margin: 0;
+  padding: 15px;
+}
+
+.action-button {
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px;
+}
+
+.action-button > button {
+  padding: 10px 20px;
+}
+
+.delete {
+  background-color: rgb(248, 47, 47);
+}
+
+.delete:hover {
+  background-color: rgb(247, 65, 65);
+}
+
+.max-w {
+  width: 15rem;
+  max-width: 15rem;
+}
+
+td {
+  justify-content: center;
+  text-align: center;
+}
+
+tr,
+td {
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
