@@ -11,9 +11,8 @@
         <?php include './components/header.php'?>
         <main class="main-container">
             <div class="form-container">
-                <h1>Add New Farmer</h1>
-
                 <div class="add-form">
+                    <h1>Add Farmer</h1>
                     <form action="./function/function.php" method="POST">
                         <label for="farmerName">Name</label><br>
                         <input type="text" id="farmerName" name="farmerName" required> <br><br>

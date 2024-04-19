@@ -25,7 +25,7 @@
                 <?php
                     include_once "./../config/dbcon.php";
 
-                    $query = "SELECT * from farmer";
+                    $query = "SELECT * FROM farmer";
                     $result = mysqli_query($conn, $query);
 
                     if($result) {
@@ -37,15 +37,23 @@
                             echo "<td>".$row['farmerFBPage']."</td>";
                             echo "<td class='action-button'>";
                             echo "<button class='submit'><a href='/avb_bsit2d_it303_olclass/pages/editData.php?farmerId=".$row['farmerID']."'>Update</a></button>";
-                            echo "<button class='delete'>Delete</button>";
+                            echo "<button class='delete' onclick='confirmDelete(".$row['farmerID'].")'>Delete</button>";
                             echo "</td>";
                             echo "</tr>";
                         }
                     }
                 ?>
+
                 </tbody>
             </table>
         </main>
     </div>
+    <script>
+        function confirmDelete(farmerId) {
+            if (confirm("Are you sure you want to delete this farmer?")) {
+                window.location.href = "/avb_bsit2d_it303_olclass/function/function.php?action=delete&farmerId=" + farmerId;
+            }
+        }
+    </script>
 </body>
 </html>

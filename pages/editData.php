@@ -12,8 +12,6 @@
         
         <main class="main-container">
             <div class="form-container">
-                <h1>Edit Farmer</h1>
-
                 <div class="add-form">
                     <?php
                         require_once "./../config/dbcon.php";
@@ -26,6 +24,8 @@
                             if(mysqli_num_rows($result) > 0) {
                                 $farmerData = mysqli_fetch_assoc($result);
                     ?>
+
+                    <h1>Edit Farmer</h1>
                     <form action="" method="POST">
                         <input type="hidden" name="farmerId" value="<?php echo $farmerId; ?>">
                         <label for="farmerName">Name</label><br>
@@ -50,7 +50,6 @@
                             echo "farmerId is not set in the URL";
                         }
 
-                        // Process update when form is submitted
                         if(isset($_POST['updateFarmer'])) {
                             $farmerName = mysqli_real_escape_string($conn, $_POST['farmerName']);
                             $farmerLocation = mysqli_real_escape_string($conn, $_POST['farmerLocation']);

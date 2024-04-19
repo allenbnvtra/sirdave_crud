@@ -31,5 +31,15 @@
         } else {
             echo "<p>Error updating farmer: " . mysqli_error($conn) . "</p>";
         }
+    } elseif(isset($_GET['farmerId']) && isset($_GET['action']) && $_GET['action'] === 'delete') {
+        $farmerId = mysqli_real_escape_string($conn, $_GET['farmerId']);
+        $deleteQuery = "DELETE FROM farmer WHERE farmerID='$farmerId'";
+        $deleteResult = mysqli_query($conn, $deleteQuery);
+
+        if($deleteResult) {
+            header("Location: /avb_bsit2d_it303_olclass/pages/displayData.php");
+        } else {
+            echo "<p>Error deleting farmer: " . mysqli_error($conn) . "</p>";
+        }
     }
 ?>
